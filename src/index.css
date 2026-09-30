@@ -1,0 +1,107 @@
+:root {
+  --bg-a: #f1f4f8;
+  --bg-b: #edf1f5;
+  --bg-spot-a: rgba(0, 126, 156, 0.08);
+  --bg-spot-b: rgba(45, 60, 75, 0.08);
+  --surface: #ffffff;
+  --surface-soft: #f6f8fb;
+  --text: #1d2731;
+  --muted: #5f6b78;
+  --border: #d5dde6;
+  --accent: #008f95;
+  --accent-strong: #007f85;
+  --accent-bg: rgba(0, 143, 149, 0.12);
+  --success-text: #008f95;
+  --success-bg: rgba(0, 143, 149, 0.14);
+  --danger-text: #d9513c;
+  --danger-bg: rgba(217, 81, 60, 0.14);
+  --warning-text: #a8641b;
+  --warning-bg: rgba(194, 124, 40, 0.16);
+  --header-bg: #ffffff;
+  --header-border: #d0dae4;
+  --header-text: #1f2933;
+  --shadow:
+    rgba(18, 35, 52, 0.06) 0 10px 25px -14px,
+    rgba(18, 35, 52, 0.08) 0 8px 18px -16px;
+
+  /* JSON syntax colors */
+  --json-key: #12404f;
+  --json-string: #0a6f52;
+  --json-number: #1f5fb0;
+  --json-boolean: #8a4bb8;
+  --json-null: #6b7683;
+  --json-punctuation: #7d8894;
+
+  --font-body: 'Trebuchet MS', Verdana, Tahoma, sans-serif;
+  --font-heading: 'Trebuchet MS', Verdana, Tahoma, sans-serif;
+  --font-mono: 'Cascadia Code', Consolas, 'Courier New', monospace;
+
+  color-scheme: light;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg-a);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme='dark'] {
+  --bg-a: #0b0f13;
+  --bg-b: #0d1117;
+  --bg-spot-a: rgba(0, 196, 180, 0.08);
+  --bg-spot-b: rgba(71, 83, 97, 0.12);
+  --surface: #12171d;
+  --surface-soft: #0f141a;
+  --text: #d6dee8;
+  --muted: #8f9ba8;
+  --border: #232c36;
+  --accent: #00c4b4;
+  --accent-strong: #43e5d3;
+  --accent-bg: rgba(0, 196, 180, 0.16);
+  --success-text: #29d6c1;
+  --success-bg: rgba(0, 196, 180, 0.18);
+  --danger-text: #ff7b68;
+  --danger-bg: rgba(255, 103, 80, 0.2);
+  --warning-text: #f0b866;
+  --warning-bg: rgba(240, 184, 102, 0.16);
+  --header-bg: #10151b;
+  --header-border: #27323d;
+  --header-text: #ebf1f7;
+  --shadow:
+    rgba(0, 0, 0, 0.45) 0 16px 28px -18px,
+    rgba(0, 0, 0, 0.5) 0 12px 22px -20px;
+
+  --json-key: #8fd3e8;
+  --json-string: #46d6a3;
+  --json-number: #79b8ff;
+  --json-boolean: #d3a2ff;
+  --json-null: #8f9ba8;
+  --json-punctuation: #7b8794;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(850px 420px at 8% -8%, var(--bg-spot-a), transparent),
+    radial-gradient(700px 360px at 92% -8%, var(--bg-spot-b), transparent),
+    linear-gradient(180deg, var(--bg-a), var(--bg-b));
+  color: var(--text);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
